@@ -13,7 +13,6 @@ import {
 // import { motion } from "framer-motion";
 import {cn} from "@/lib/utils";
 import {Routes} from "@/constant/navigation";
-import DashNavBar from "@/components/common/DashNavBar.tsx";
 
 const DashLayouts = ({children}: { children: React.ReactNode }) => {
     const [open, setOpen] = useState(false);
@@ -55,7 +54,6 @@ const DashLayouts = ({children}: { children: React.ReactNode }) => {
                         </div>
                     </SidebarBody>
                 </Sidebar>
-                <DashNavBar />
                 {children}
             </div>
         </>
