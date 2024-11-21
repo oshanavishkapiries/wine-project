@@ -4,14 +4,6 @@ import {
     SidebarBody,
     SidebarLink,
 } from "@/components/aceternity/sidebar";
-// import {
-//   IconArrowLeft,
-//   IconBrandTabler,
-//   IconSettings,
-//   IconUserBolt,
-// } from "@tabler/icons-react";
-// import { motion } from "framer-motion";
-import {cn} from "@/lib/utils";
 import {Routes} from "@/constant/navigation";
 import DashNavBar from "@/components/common/DashNavBar.tsx";
 
@@ -21,10 +13,9 @@ const DashLayouts = ({children}: { children: React.ReactNode }) => {
     return (
         <>
             <div
-                className={cn(
-                    "flex flex-col md:flex-row w-full min-h-screen flex-1 overflow-hidden",
-                    "h-[60vh]"
-                )}
+                className={
+                    "flex flex-col md:flex-row w-full h-screen flex-1 overflow-hidden"
+                }
             >
                 <Sidebar open={open} setOpen={setOpen}>
                     <SidebarBody className="justify-between gap-10">
@@ -55,8 +46,10 @@ const DashLayouts = ({children}: { children: React.ReactNode }) => {
                         </div>
                     </SidebarBody>
                 </Sidebar>
-                <DashNavBar />
-                {children}
+                <div className={'flex relative flex-col flex-1 overflow-y-auto overflow-x-hidden'}>
+                    <DashNavBar/>
+                    {children}
+                </div>
             </div>
         </>
     );
