@@ -1,4 +1,3 @@
-import {Home, Box, Package, Users} from "lucide-react";
 import * as Page from "../view/pages";
 import * as Layout from "../view/layouts";
 import {IRoute} from "@/types";
@@ -11,7 +10,7 @@ export const Routes: IRoute[] = [
         isAbsolute: true,
         page: Page.DashBoard,
         layout: Layout.DashLayouts,
-        icon: Home,
+        icon: "dashboard",
     },
     {
         label: "Product",
@@ -19,7 +18,7 @@ export const Routes: IRoute[] = [
         isAbsolute: true,
         page: Page.Product,
         layout: Layout.DashLayouts,
-        icon: Box,
+        icon: "product",
     },
     {
         label: "Order Manage",
@@ -27,7 +26,7 @@ export const Routes: IRoute[] = [
         isAbsolute: true,
         page: Page.OrderManege,
         layout: Layout.DashLayouts,
-        icon: Package,
+        icon: "order",
     },
     {
         label: "User Manage",
@@ -35,7 +34,7 @@ export const Routes: IRoute[] = [
         isAbsolute: true,
         page: Page.UserManege,
         layout: Layout.DashLayouts,
-        icon: Users,
+        icon: "user",
     },
     // -- non authenticated
     // {
